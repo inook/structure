@@ -1,3 +1,216 @@
+/*
+                                                              
+  ####  ##### #####  #    #  ####  ##### #    # #####  ###### 
+ #        #   #    # #    # #    #   #   #    # #    # #      
+  ####    #   #    # #    # #        #   #    # #    # #####  
+      #   #   #####  #    # #        #   #    # #####  #      
+ #    #   #   #   #  #    # #    #   #   #    # #   #  #      
+  ####    #   #    #  ####   ####    #    ####  #    # ###### 
+                                                              
+*/
+/* ------------------------------- */
+/* SOMMAIRE                        */
+/*
+	0. SASS
+		- variables et mixins
+	1. GLOBAL
+	2. HEADER
+*/
+body {
+  font-family: helvetica, arial; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=style.css.map */
+/*
+body.home {
+	background: linear-gradient(270deg, #2bdfb0, #538eaa, #2fb0ee, #ed2fee, #ee852f, #2fcbee);
+	background-size: 1200% 1200%;
+
+	-webkit-animation: indexGradient 100s ease infinite;
+	-moz-animation: indexGradient 100s ease infinite;
+	animation: indexGradient 100s ease infinite;
+}
+
+@-webkit-keyframes indexGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes indexGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes indexGradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+*/
+/* ------------------------------- */
+/* 0.VARIABLES SASS                */
+/* END VARIABLES SASS              */
+/* ------------------------------- */
+/* ------------------------------- */
+/* 1.HEADER                       */
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 110px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  -moz-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  background-color: #fff; }
+
+header.scroll {
+  height: 50px; }
+
+@media screen and (max-width: 1023px) {
+  header {
+    height: 50px; } }
+nav {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 0 0 30px; }
+
+nav ul {
+  margin: 0;
+  padding: 0; }
+
+nav ul li {
+  display: inline-block; }
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 30px 0 0;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+
+nav ul li a:hover {
+  color: #0433ff; }
+
+nav ul li.current-menu-item a {
+  color: #0433ff; }
+
+.nav-mobile {
+  display: none;
+  height: 20px; }
+
+@media screen and (max-width: 1023px) {
+  nav {
+    padding: 0 0 0 15px; }
+
+  .nav-desktop {
+    display: none; }
+
+  .nav-mobile {
+    display: block; } }
+.logo {
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; }
+
+.logo-large {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.logo-large.scroll {
+  transform: translate(-50%, -100px); }
+
+.logo-small {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100px); }
+
+.logo-small.scroll {
+  transform: translate(-50%, -50%); }
+
+.logo h1 {
+  margin: 0;
+  font-size: 25px; }
+
+.logo h1 a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+
+.logo h1 a:hover {
+  color: #0433ff; }
+
+.cart {
+  position: relative;
+  float: right;
+  background-color: #0433ff;
+  height: 100%;
+  width: 300px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out; }
+
+.cart:hover {
+  background-color: #0027d0; }
+
+.cart-inner {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  padding: 0 20px 0 20px;
+  width: 100%; }
+
+.cart-inner span {
+  display: inline-block;
+  vertical-align: middle; }
+
+.cart-inner .cart-count {
+  color: #0433ff;
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  text-align: center;
+  margin: 0 0 0 10px;
+  padding: 5px 0 0 0; }
+
+@media screen and (max-width: 1023px) {
+  .cart {
+    width: 50px;
+    text-align: center; }
+
+  .cart-inner {
+    padding: 0; }
+
+  .cart-inner .cart-title {
+    display: none; }
+
+  .cart-inner .cart-count {
+    margin: 0px; } }
+/* END HEADER                      */
+/* ------------------------------- */
+.content {
+  height: 4000px;
+  width: 300px; }

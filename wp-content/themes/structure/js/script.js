@@ -1,19 +1,24 @@
 $( document ).ready(function() {
 
 
-  console.log('ready');
+// HEADER SCROLL
+// ----------------------
 
+var windowHeight = $(window).height();  
+var triggerHeight = 200 ;
 
-  // Menu mobile
-  // ----------------------
-  $( ".nav-mobile-bt" ).click(function() {
+$(window).scroll(function() {
+  var y = $(window).scrollTop();
+  if(y > triggerHeight) {
+    $('header, .logo-large, .logo-small').addClass('scroll');
+  } else {
+    $('header, .logo-large, .logo-small').removeClass('scroll');
+  }
+});
 
-    if( $('.nav-mobile').hasClass('opened') ) {
-      $('body, .site-container, .nav-mobile').removeClass('opened');
-    } else {
-      $('body, .site-container, .nav-mobile').addClass('opened');
-    }
-
-  });
 
 });
+
+
+
+
