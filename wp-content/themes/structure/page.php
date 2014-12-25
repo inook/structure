@@ -1,15 +1,10 @@
 <?php get_header() ?>
 
 <!-- Content -->
-<div class="row">
-
-  <div class="columns large-12">
-    <?php the_breadcrumb(); ?>
-  </div>
-
-  <div class="columns large-12">
-    <p>content</p>
-  </div>
+<div class="content row">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
 </div>
 
 

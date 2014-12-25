@@ -36,33 +36,33 @@ body {
 
 }
 
-/*
-body.home {
-	background: linear-gradient(270deg, #2bdfb0, #538eaa, #2fb0ee, #ed2fee, #ee852f, #2fcbee);
-	background-size: 1200% 1200%;
 
-	-webkit-animation: indexGradient 100s ease infinite;
-	-moz-animation: indexGradient 100s ease infinite;
-	animation: indexGradient 100s ease infinite;
-}
+// body.home {
+// 	background: linear-gradient(270deg, #2bdfb0, #538eaa, #2fb0ee, #ed2fee, #ee852f, #2fcbee);
+// 	background-size: 1200% 1200%;
 
-@-webkit-keyframes indexGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes indexGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes indexGradient { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+// 	-webkit-animation: indexGradient 500s ease infinite;
+// 	-moz-animation: indexGradient 500s ease infinite;
+// 	animation: indexGradient 500s ease infinite;
+// }
 
-*/
+// @-webkit-keyframes indexGradient {
+//     0%{background-position:0% 50%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 50%}
+// }
+// @-moz-keyframes indexGradient {
+//     0%{background-position:0% 50%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 50%}
+// }
+// @keyframes indexGradient { 
+//     0%{background-position:0% 50%}
+//     50%{background-position:100% 50%}
+//     100%{background-position:0% 50%}
+// }
+
+
 
 /* ------------------------------- */
 /* 0.VARIABLES SASS                */
@@ -82,7 +82,17 @@ body.home {
 
 
 /* ------------------------------- */
-/* 1.HEADER                       */
+/* 1.GLOBAL
+
+
+
+/* END GLOBAL                      */
+/* ------------------------------- */
+
+
+
+/* ------------------------------- */
+/* 2.HEADER                        */
 
 	
 header {
@@ -294,5 +304,7 @@ header {
 
 .content {
 	height:4000px;
-	width:300px;
+	width:100%;
+	padding-top: 110px; // TOP NAV HEIGHT
 }
+

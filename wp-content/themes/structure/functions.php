@@ -1,5 +1,10 @@
 <?php
 
+// dev settings
+// -------------------------------------------------
+
+add_filter('show_admin_bar', '__return_false');
+
 
 // thumbnails
 // -------------------------------------------------
@@ -56,3 +61,9 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
+
+
+// Shortcode(s)
+// -------------------------------------------------
+
+require_once('admin/functions/shortcode.php');
