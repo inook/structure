@@ -18,6 +18,7 @@ add_filter('mce_buttons_2', 'my_mce_buttons_2');
 function my_mce_before_init_insert_formats( $init_array ) {
 
 	// On récupère la liste de toutes les fontes
+	// TODO: supprimer les produits parents (ex: print)
 	$args = array( 
 		'post_type' => 'product', 
 		'orderby' =>'date',
@@ -25,14 +26,18 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		);
 
 	$loop = new WP_Query( $args );
-	$families = array();
 
 	// On remplit le tableau $style_formats que l'on insère ensuite dans le select du Tiny MCE
 	while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+		$font_title = get_the_title();
+		// Pour utiliser directement le nom de la font comme classe css
+		// TODO: checker aussi les accents et caractères spéciaux
+		$uri_font_title = preg_replace('/\s+/', '', strtolower($font_title));
+
 		$style_formats[] = array( 
-			'title' => get_the_title(),
+			'title' => $font_title,
 			'selector' => 'h1, h2, h3, h4, h5, h6, p',
-			'classes' => get_the_title(),
+			'classes' => $uri_font_title,
 			'wrapper' => false
 		);
 	endwhile;

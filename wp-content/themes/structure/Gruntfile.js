@@ -27,7 +27,8 @@ module.exports = function(grunt) {
 	sass: {
 		dist: {
 			files: {
-				'css/style.css': 'css/style.scss'
+				'css/style.css': 'css/style.scss',
+				'css/fonts.css': 'css/fonts.scss'
 			}
 		}
 	},
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
 	cssmin: {
 		combine: {
 			files: {
-				'src/style.min.css': ['css/normalize.css', 'css/style.css']
+				'src/style.min.css': ['css/normalize.css', 'css/style.css', 'css/fonts.css']
 			}
 		}
 	}

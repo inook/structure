@@ -11,6 +11,8 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/src/style.min.css">
+	<!-- TODO: gérer autrement cette css pour qu'elle n'apparaisse pas clairement -->
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/src/fonts.css">
 
 	<!-- HTML5 for IE -->
 	<!--[if lt IE 9]>
@@ -27,7 +29,7 @@
 		<nav>
 
 			<div class="nav-desktop">
-				<?php wp_nav_menu( $args ); ?>
+				<?php wp_nav_menu(); ?>
 			</div>
 
 			<div class="nav-mobile">

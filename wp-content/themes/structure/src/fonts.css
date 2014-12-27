@@ -1,0 +1,40 @@
+
+			@font-face {
+		    font-family: 'print';
+		    src: url('../fonts/print/print/print.eot');
+		    src: url('../fonts/print/print/print.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/print/print/print.woff') format('woff'),
+		         url('../fonts/print/print/print.ttf') format('truetype'),
+		         url('../fonts/print/print/print.svg#print') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+			}
+			.print {
+				font-family: 'print', 'Comic Sans MS';
+			}
+			@font-face {
+		    font-family: 'printregular';
+		    src: url('../fonts/print/printregular/printregular.eot');
+		    src: url('../fonts/print/printregular/printregular.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/print/printregular/printregular.woff') format('woff'),
+		         url('../fonts/print/printregular/printregular.ttf') format('truetype'),
+		         url('../fonts/print/printregular/printregular.svg#printregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+			}
+			.printregular {
+				font-family: 'printregular', 'Comic Sans MS';
+			}
+			@font-face {
+		    font-family: 'printlight';
+		    src: url('../fonts/print/printlight/printlight.eot');
+		    src: url('../fonts/print/printlight/printlight.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/print/printlight/printlight.woff') format('woff'),
+		         url('../fonts/print/printlight/printlight.ttf') format('truetype'),
+		         url('../fonts/print/printlight/printlight.svg#printlight') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+			}
+			.printlight {
+				font-family: 'printlight', 'Comic Sans MS';
+			}
